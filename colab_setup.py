@@ -29,7 +29,10 @@ def install_dependencies():
     
     subprocess.check_call([
         sys.executable, "-m", "pip", "install",
-        "TTS==0.22.0", "coqui-tts-trainer"
+        "numpy<2.0.0",
+        "transformers==4.35.2",
+        "TTS==0.22.0",
+        "coqui-tts-trainer",
     ])
     
     print("\n" + "=" * 60)
