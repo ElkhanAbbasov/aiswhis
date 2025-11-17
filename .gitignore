@@ -1,0 +1,10 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+.ipynb_checkpoints
+.DS_Store
+data/
+audio_*.wav
