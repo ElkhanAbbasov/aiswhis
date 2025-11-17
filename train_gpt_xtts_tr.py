@@ -180,7 +180,8 @@ def main():
                 "language": LANGUAGE,
             },
         ],
-        eval_split_size=0.05,
+        #change to 0.7 or 0.8 for more natural results when you have more samples
+        eval_split_size=0.1, 
     )
 
     # Init XTTS GPT trainer model
