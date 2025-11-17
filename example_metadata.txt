@@ -1,0 +1,5 @@
+0001|Merhaba, bu bir test cümlesidir.|Merhaba, bu bir test cümlesidir.
+0002|Türkçe sesli kitap okuma projesi için kaydedilmiştir.|Türkçe sesli kitap okuma projesi için kaydedilmiştir.
+0003|Yapay zeka asistanınız size yardımcı olmak için burada.|Yapay zeka asistanınız size yardımcı olmak için burada.
+0004|İstanbul, Türkiye'nin en kalabalık şehridir.|İstanbul, Türkiye'nin en kalabalık şehridir.
+0005|Güneşli bir gün piknik yapmak için idealdir.|Güneşli bir gün piknik yapmak için idealdir.

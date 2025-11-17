@@ -1,0 +1,29 @@
+# XTTS-v2 Turkish Fine-tuning Requirements
+# For use on Google Colab with L4 GPU
+
+# Core dependencies
+torch==2.3.1
+torchaudio==2.3.1
+# Install with: pip install torch==2.3.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+
+# TTS and Training
+TTS==0.22.0
+coqui-tts-trainer
+
+# Audio processing
+librosa>=0.10.0
+soundfile>=0.12.1
+
+# Utilities
+numpy>=1.24.0
+scipy>=1.10.0
+matplotlib>=3.7.0
+tensorboard>=2.12.0
+
+# For inference server (optional)
+flask>=2.3.0
+flask-cors>=4.0.0
+
+# Dataset preparation
+pandas>=2.0.0
+tqdm>=4.65.0
