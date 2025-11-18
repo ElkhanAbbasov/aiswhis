@@ -190,10 +190,13 @@ def main():
     # Load dataset
     train_samples, eval_samples = load_tts_samples(
         DATASETS_CONFIG_LIST,
-        eval_split=True,
-        eval_split_max_size=config.eval_split_max_size,
-        eval_split_size=config.eval_split_size,
+        eval_split=False,
+        eval_split_max_size=0,
+        eval_split_size=0,
     )
+
+    # hard-disable eval
+    eval_samples = None
 
     # Trainer
     trainer = Trainer(
@@ -202,14 +205,19 @@ def main():
             skip_train_epoch=False,
             start_with_eval=START_WITH_EVAL,
             grad_accum_steps=GRAD_ACUMM_STEPS,
+            run_eval=False,
             # early_stopping_fn=early_stopping_fn,  # optional hook
         ),
         config,
         output_path=OUT_PATH,
         model=model,
         train_samples=train_samples,
-        eval_samples=eval_samples,
+        eval_samples=None,   # no eval samples
     )
+
+    trainer.run_eval = False
+    trainer._eval_loader = None
+    trainer.eval_loader = None
 
     trainer.fit()
 
